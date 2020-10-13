@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Prediction</title>
+
+    <style>
+        h1 {text-align: center;}
+        p {text-align: center;}
+        div {text-align: center;}
+        </style>
+  
+</head>
+<body>
+
+    <div class="container" > 
+
+        <form action="calc" method="POST">
+
+            {% csrf_token %}
+            
+            <h3>Enter Average Area Income </h3>
+            <input type="=text" name="income">
+            <h1></h1>
+            
+            <h3>Enter Average Area House Age</h3>
+            <input type="=text" name="age">
+            <h1></h1>
+
+            <h3>Enter Average Area Number of Rooms</h3>
+            <input type="=text" name="rooms">
+            <h1></h1>
+
+            <h3>Enter Average Area Number of Bedrooms</h3>
+            <input type="=text" name="bedrooms">
+            <h1></h1>
+
+            <h3>Enter Area Population </h3>
+            <input type="=text" name="population">
+            <h1></h1>
+
+            <button type="submit" class="btn btn-secondary btn-lg">Submit</button>
+            
+        </form>
+    </div>
+    
+</body>
+</html>
+
+    {% endblock %}
+
